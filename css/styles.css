@@ -144,11 +144,11 @@ mark {
 }
 .brand__mark { width: 38px; height: 38px; flex-shrink: 0; color: var(--yellow); }
 .brand__word {
-  font-family: var(--f-display);
-  font-size: 1.3rem;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  text-transform: uppercase;
+  font-family: var(--f-body);
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+  line-height: 1.05;
 }
 .brand__word small {
   display: block;
@@ -232,6 +232,7 @@ mark {
   line-height: 0.96;
   color: var(--green-ink);
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 .hero__lede {
   font-family: var(--f-body);
@@ -242,6 +243,12 @@ mark {
   margin-top: 1.2rem;
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
+
+@media (max-width: 540px) {
+  .hero__linebreak { display: none; }
+  .hero h1 { font-size: clamp(1.9rem, 10vw, 2.6rem); line-height: 1.05; }
+  mark { padding: 0 0.22em; }
+}
 
 .btn {
   display: inline-flex;
@@ -276,7 +283,13 @@ mark {
 /* Stats strip                                                              */
 /* ---------------------------------------------------------------------- */
 .stats { background: var(--cream); }
-.stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 2.2rem 0; }
+.stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; padding: 2.2rem 0; }
+.stat {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-card);
+}
 .stat__num { font-family: var(--f-display); font-size: 2.3rem; color: var(--green-dark); line-height: 1; }
 .stat__label { font-family: var(--f-body); font-weight: 600; font-size: 0.76rem; letter-spacing: 0.03em; color: var(--ink); opacity: 0.75; margin-top: 0.5rem; }
 @media (max-width: 760px) { .stats__grid { grid-template-columns: repeat(2, 1fr); } }
@@ -522,7 +535,7 @@ mark {
 @media (max-width: 760px) { .footer__grid { grid-template-columns: 1fr; } }
 .footer__brand { display: flex; align-items: center; gap: 0.6rem; color: var(--white); margin-bottom: 0.8rem; }
 .footer__brand svg { width: 30px; height: 30px; color: var(--yellow); }
-.footer__brand span { font-family: var(--f-display); font-size: 1.2rem; text-transform: uppercase; }
+.footer__brand span { font-family: var(--f-body); font-weight: 800; font-size: 1.2rem; }
 .site-footer p { font-size: 0.92rem; max-width: 30em; }
 .footer h5 { font-family: var(--f-body); font-weight: 700; font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); margin-bottom: 0.9rem; }
 .footer__links li { margin-bottom: 0.55rem; }
