@@ -1,0 +1,651 @@
+/* ==========================================================================
+   VIU LA MUNTANYA — sistema de disseny
+   Paleta "mapa topogràfic": paper envellit, verd de bosc, blaus de fita
+   i el taronja de senyalització de rutes (blaze) com a accent d'acció.
+   ========================================================================== */
+
+:root {
+  /* ---- color ---- */
+  --forest-deep:   #1f3327;
+  --forest-mid:    #395a41;
+  --forest-pale:   #9ab89f;
+  --paper:         #e9e1c9;
+  --paper-dark:    #ddd1ac;
+  --paper-darker:  #c7b686;
+  --blaze:         #bb4f23;
+  --blaze-dark:    #8f3a19;
+  --ochre:         #bf8f37;
+  --ink:           #221d14;
+  --ink-soft:      #55503f;
+  --cream:         #f5efdd;
+
+  /* ---- type ---- */
+  --f-display: "Staatliches", "Arial Narrow", sans-serif;
+  --f-body: "Zilla Slab", Georgia, "Times New Roman", serif;
+  --f-mono: "Space Mono", "Courier New", monospace;
+
+  /* ---- scale ---- */
+  --container: 1180px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --shadow-card: 0 10px 24px -12px rgba(31, 51, 39, 0.35);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reset                                                                    */
+/* ---------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, h4 { margin: 0; font-family: var(--f-display); font-weight: 400; letter-spacing: 0.01em; }
+p { margin: 0 0 1em; }
+button { font: inherit; cursor: pointer; }
+
+:focus-visible {
+  outline: 3px solid var(--blaze);
+  outline-offset: 3px;
+}
+
+/* topographic contour texture, used as a faint background layer */
+.topo-bg {
+  position: relative;
+}
+.topo-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/topo-light.svg");
+  background-size: 480px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.topo-bg--dark::before {
+  background-image: url("../assets/topo-dark.svg");
+  opacity: 0.5;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blaze-dark);
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--blaze);
+  display: inline-block;
+}
+.eyebrow--onDark { color: var(--ochre); }
+.eyebrow--onDark::before { background: var(--ochre); }
+
+/* ---------------------------------------------------------------------- */
+/* Header / navegació                                                       */
+/* ---------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--forest-deep);
+  border-bottom: 3px solid var(--blaze);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--cream);
+}
+.brand__mark { width: 38px; height: 38px; flex-shrink: 0; color: var(--ochre); }
+.brand__word {
+  font-family: var(--f-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+.brand__word small {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--forest-pale);
+  margin-top: 3px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav__list a {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cream);
+  padding: 0.4rem 0.1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.nav__list a:hover { border-color: var(--ochre); }
+.nav__list a[aria-current="page"] { color: var(--ochre); border-color: var(--ochre); }
+.nav__cta {
+  background: var(--blaze);
+  color: var(--cream) !important;
+  padding: 0.55rem 1.1rem !important;
+  border-radius: var(--radius-sm);
+  border-bottom: none !important;
+}
+.nav__cta:hover { background: var(--blaze-dark); border-color: transparent !important; }
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--cream);
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 860px) {
+  .nav__toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav {
+    position: fixed;
+    inset: 76px 0 0 0;
+    background: var(--forest-deep);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  }
+  .nav.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav__list { flex-direction: column; align-items: flex-start; gap: 0; width: 100%; }
+  .nav__list li { width: 100%; border-bottom: 1px solid rgba(245,239,221,0.12); }
+  .nav__list a { display: block; padding: 1rem 0.2rem; }
+  .nav__cta { margin-top: 1rem; text-align: center; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Hero                                                                     */
+/* ---------------------------------------------------------------------- */
+.hero {
+  background: var(--forest-deep);
+  color: var(--cream);
+  padding: 5rem 0 4rem;
+  overflow: hidden;
+}
+.hero--page { padding: 3.6rem 0 3rem; }
+.hero__coords {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--forest-pale);
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 0.98;
+  color: var(--cream);
+  text-transform: uppercase;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--ochre);
+}
+.hero__lede {
+  font-family: var(--f-body);
+  font-size: 1.2rem;
+  max-width: 42em;
+  color: var(--paper);
+  margin-top: 1.1rem;
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--blaze); color: var(--cream); }
+.btn--primary:hover { background: var(--blaze-dark); }
+.btn--ghost { border-color: var(--ochre); color: var(--cream); }
+.btn--ghost:hover { background: rgba(245,239,221,0.08); }
+.btn--dark { border-color: var(--forest-deep); color: var(--forest-deep); }
+.btn--dark:hover { background: var(--forest-deep); color: var(--cream); }
+
+/* ---------------------------------------------------------------------- */
+/* Stats strip                                                              */
+/* ---------------------------------------------------------------------- */
+.stats {
+  background: var(--paper-dark);
+  border-bottom: 1px solid var(--paper-darker);
+}
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.stat__num {
+  font-family: var(--f-display);
+  font-size: 2.1rem;
+  color: var(--forest-deep);
+  line-height: 1;
+}
+.stat__label {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+}
+@media (max-width: 760px) {
+  .stats__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Seccions genèriques                                                      */
+/* ---------------------------------------------------------------------- */
+.section { padding: 4.5rem 0; }
+.section--tight { padding: 3rem 0; }
+.section--alt { background: var(--paper-dark); }
+.section__head { max-width: 42em; margin-bottom: 2.6rem; }
+.section__head h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  color: var(--forest-deep);
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+}
+.section__head p { color: var(--ink-soft); margin-top: 0.9rem; font-size: 1.05rem; }
+
+.divider-trail {
+  height: 1px;
+  background-image: repeating-linear-gradient(90deg, var(--paper-darker) 0 10px, transparent 10px 18px);
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Targetes "fork in the trail" (públic: escoles / casals)                  */
+/* ---------------------------------------------------------------------- */
+.fork {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+.fork__card {
+  background: var(--forest-deep);
+  color: var(--cream);
+  padding: 2.4rem;
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease;
+}
+.fork__card:hover { transform: translateY(-4px); }
+.fork__card::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("../assets/topo-dark.svg");
+  background-size: 420px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+.fork__card > * { position: relative; z-index: 1; }
+.fork__card h3 {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin: 0.6rem 0 0.7rem;
+  color: var(--cream);
+}
+.fork__card p { color: var(--paper); }
+.fork__card .btn { margin-top: 1.2rem; }
+@media (max-width: 760px) { .fork { grid-template-columns: 1fr; } }
+
+/* ---------------------------------------------------------------------- */
+/* Targetes de ruta (activitats) — l'element signatura del lloc            */
+/* ---------------------------------------------------------------------- */
+.routes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+@media (max-width: 760px) { .routes { grid-template-columns: 1fr; } }
+
+.route-card {
+  background: var(--paper);
+  border: 1px solid var(--paper-darker);
+  border-top: 6px dashed var(--ochre);
+  border-radius: var(--radius-sm);
+  padding: 2rem 2rem 1.8rem;
+  position: relative;
+  box-shadow: var(--shadow-card);
+  scroll-margin-top: 100px;
+}
+.route-card__badge {
+  position: absolute;
+  top: -22px;
+  left: 2rem;
+  width: 46px;
+  height: 46px;
+  background: var(--blaze);
+  color: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-mono);
+  font-size: 0.95rem;
+  border: 3px solid var(--paper);
+}
+.route-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  color: var(--forest-deep);
+  text-transform: uppercase;
+}
+.route-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.3rem;
+  margin: 0.9rem 0 1.1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--paper-darker);
+  border-bottom: 1px solid var(--paper-darker);
+}
+.route-card__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.route-card__meta svg { width: 15px; height: 15px; color: var(--blaze-dark); flex-shrink: 0; }
+.route-card p { color: var(--ink-soft); }
+.route-card p:last-child { margin-bottom: 0; }
+.route-card strong { color: var(--ink); }
+
+/* ---------------------------------------------------------------------- */
+/* Caixa d'informació (a qui va dirigit / com funcionem)                    */
+/* ---------------------------------------------------------------------- */
+.infobar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 860px) { .infobar { grid-template-columns: 1fr; } }
+.infobox {
+  background: var(--cream);
+  border-left: 4px solid var(--forest-mid);
+  padding: 1.5rem 1.6rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.infobox h4 {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--forest-mid);
+  margin-bottom: 0.6rem;
+}
+.infobox p { color: var(--ink-soft); font-size: 0.96rem; margin: 0; }
+
+/* ---------------------------------------------------------------------- */
+/* Timeline (El projecte)                                                   */
+/* ---------------------------------------------------------------------- */
+.timeline { position: relative; padding-left: 2.6rem; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px; top: 6px; bottom: 6px;
+  width: 2px;
+  background-image: repeating-linear-gradient(180deg, var(--forest-mid) 0 8px, transparent 8px 14px);
+}
+.timeline__step { position: relative; padding-bottom: 2.4rem; }
+.timeline__step:last-child { padding-bottom: 0; }
+.timeline__step::before {
+  content: "";
+  position: absolute;
+  left: -2.6rem;
+  top: 2px;
+  width: 22px; height: 22px;
+  background: var(--blaze);
+  border: 3px solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--forest-mid);
+}
+.timeline__step h4 {
+  font-family: var(--f-display);
+  font-size: 1.3rem;
+  color: var(--forest-deep);
+  text-transform: uppercase;
+}
+.timeline__step p { color: var(--ink-soft); margin-top: 0.4rem; }
+
+/* ---------------------------------------------------------------------- */
+/* Pilars (targetes petites en fila)                                        */
+/* ---------------------------------------------------------------------- */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+@media (max-width: 860px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
+.pillar {
+  background: var(--paper);
+  border: 1px solid var(--paper-darker);
+  padding: 1.4rem;
+  text-align: left;
+  border-radius: var(--radius-sm);
+}
+.pillar__num { font-family: var(--f-mono); color: var(--blaze); font-size: 0.8rem; }
+.pillar h4 { font-size: 1.15rem; margin: 0.4rem 0 0.3rem; color: var(--forest-deep); text-transform: uppercase; }
+.pillar p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+
+/* ---------------------------------------------------------------------- */
+/* Productes                                                                */
+/* ---------------------------------------------------------------------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+@media (max-width: 900px) { .products { grid-template-columns: 1fr; } }
+.product-card {
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--paper-darker);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+.product-card__gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2px;
+  background: var(--paper-darker);
+}
+.product-card__gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1; }
+.product-card__gallery .stack { display: grid; grid-template-rows: 1fr 1fr; gap: 2px; }
+.product-card__body { padding: 1.4rem 1.5rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
+.product-card h3 { font-size: 1.3rem; color: var(--forest-deep); text-transform: uppercase; }
+.product-card p { color: var(--ink-soft); font-size: 0.92rem; flex: 1; }
+.price-tag {
+  align-self: flex-start;
+  background: var(--blaze);
+  color: var(--cream);
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin: 0.6rem 0 0.9rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Formularis incrustats (contacte / treballa)                              */
+/* ---------------------------------------------------------------------- */
+.form-frame {
+  background: var(--cream);
+  border: 2px solid var(--forest-deep);
+  border-radius: var(--radius-md);
+  padding: 0.6rem;
+  box-shadow: var(--shadow-card);
+}
+.form-frame__label {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest-mid);
+  padding: 0.6rem 0.8rem 0;
+}
+.form-frame iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+.form-fallback {
+  margin-top: 1rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+@media (max-width: 860px) { .contact-info { grid-template-columns: 1fr; } }
+
+/* ---------------------------------------------------------------------- */
+/* CTA final                                                                */
+/* ---------------------------------------------------------------------- */
+.cta-final {
+  background: var(--forest-deep);
+  color: var(--cream);
+  padding: 4rem 0;
+  text-align: center;
+}
+.cta-final h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+}
+.cta-final p { color: var(--paper); max-width: 34em; margin: 1rem auto 2rem; }
+.cta-final .hero__actions { justify-content: center; }
+
+/* ---------------------------------------------------------------------- */
+/* Footer                                                                   */
+/* ---------------------------------------------------------------------- */
+.site-footer {
+  background: #16241b;
+  color: var(--forest-pale);
+  padding: 3rem 0 1.6rem;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2.4rem;
+  padding-bottom: 2.2rem;
+  border-bottom: 1px solid rgba(245,239,221,0.12);
+}
+@media (max-width: 760px) { .footer__grid { grid-template-columns: 1fr; } }
+.footer__brand { display: flex; align-items: center; gap: 0.6rem; color: var(--cream); margin-bottom: 0.8rem; }
+.footer__brand svg { width: 30px; height: 30px; color: var(--ochre); }
+.footer__brand span { font-family: var(--f-display); font-size: 1.15rem; text-transform: uppercase; }
+.site-footer p { font-size: 0.92rem; max-width: 30em; }
+.footer h5 {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 0.9rem;
+}
+.footer__links li { margin-bottom: 0.55rem; }
+.footer__links a:hover { color: var(--ochre); }
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 1.4rem;
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Scroll reveal utility                                                    */
+/* ---------------------------------------------------------------------- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }

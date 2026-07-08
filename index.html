@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viu la Muntanya — Orientació i aventura al Baix Maresme</title>
+<meta name="description" content="Des de 2015 portem escoles, instituts i casals d'estiu a descobrir el Baix Maresme amb mapa, brúixola i esperit d'aventura. Curses d'orientació, reptes cooperatius i mountain escape room.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Zilla+Slab:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 20c0-2.6 1.8-4.7 4-5.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 3 3 5v16l6-2 6 2 6-2V3l-6 2-6-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="19" stroke="currentColor" stroke-width="2"/><line x1="15" y1="5" x2="15" y2="21" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        <line x1="20" y1="4" x2="20" y2="8" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="20" y1="32" x2="20" y2="36" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="4" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="1.4"/>
+        <line x1="32" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M11 26 18 10 21 19 29 26 21 21Z" fill="currentColor"/>
+      </svg>
+      <span class="brand__word">Viu la Muntanya<small>Baix Maresme · des de 2015</small></span>
+    </a>
+    <button class="nav__toggle" aria-label="Obrir menú" aria-expanded="false">
+      <svg width="22" height="22"><use href="#icon-menu"/></svg>
+    </button>
+    <nav class="nav" aria-label="Navegació principal">
+      <ul class="nav__list">
+        <li><a href="index.html" aria-current="page">Inici</a></li>
+        <li><a href="projecte.html">El projecte</a></li>
+        <li><a href="escoles.html">Escoles</a></li>
+        <li><a href="casals.html">Casals d'estiu</a></li>
+        <li><a href="productes.html">Productes</a></li>
+        <li><a href="treballa.html">Treballa amb nosaltres</a></li>
+        <li><a href="contacte.html" class="nav__cta">Contacte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero topo-bg topo-bg--dark">
+    <div class="container">
+      <p class="hero__coords">41°32′ N · Baix Maresme — Argentona · Mataró</p>
+      <h1>Viu la muntanya<br>amb mapa i <em>brúixola</em></h1>
+      <p class="hero__lede">Des de 2015 acompanyem escoles, instituts i casals d'estiu a descobrir el nostre entorn natural: curses d'orientació, reptes cooperatius i un mountain escape room a l'aire lliure. Sense pantalles, amb un mapa topogràfic a les mans.</p>
+      <div class="hero__actions">
+        <a href="escoles.html" class="btn btn--primary">Activitats per a escoles</a>
+        <a href="casals.html" class="btn btn--ghost">Activitats per a casals d'estiu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="reveal">
+        <div class="stat__num">2015</div>
+        <div class="stat__label">Any de naixement del projecte</div>
+      </div>
+      <div class="reveal">
+        <div class="stat__num">+50</div>
+        <div class="stat__label">Participants cada setmana d'estiu</div>
+      </div>
+      <div class="reveal">
+        <div class="stat__num">4</div>
+        <div class="stat__label">Activitats d'orientació diferents</div>
+      </div>
+      <div class="reveal">
+        <div class="stat__num">3–4h</div>
+        <div class="stat__label">Durada mitjana de cada sortida</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Dos camins, un mateix mapa</span>
+        <h2>On portem el projecte</h2>
+        <p>Les mateixes activitats es poden adaptar a dos públics ben diferents. Tria el teu camí per veure com ho treballem en cada cas.</p>
+      </div>
+      <div class="fork">
+        <article class="fork__card reveal">
+          <span class="eyebrow eyebrow--onDark">Educació primària i secundària</span>
+          <h3>Centres escolars</h3>
+          <p>Sortides vinculades al currículum d'orientació, pensades per a Cicle Mitjà i Superior de Primària i per a l'ESO. També treballem el "team building" amb equips docents.</p>
+          <a href="escoles.html" class="btn btn--ghost">Veure activitats escolars</a>
+        </article>
+        <article class="fork__card reveal">
+          <span class="eyebrow eyebrow--onDark">Estiu i temps lliure</span>
+          <h3>Casals d'estiu</h3>
+          <p>La mateixa filosofia d'orientació i aventura, adaptada al ritme d'un casal: més joc, més cooperació i el mateix rigor a l'hora de fer servir mapa i brúixola.</p>
+          <a href="casals.html" class="btn btn--ghost">Veure activitats d'estiu</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider-trail">
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Quatre activitats, un mateix mapa</span>
+        <h2>Les rutes que oferim</h2>
+        <p>Totes parteixen del mateix principi: un mapa topogràfic i un grup que ha de reconèixer, decidir i executar el seu propi camí.</p>
+      </div>
+      <div class="routes">
+        <article class="route-card reveal">
+          <span class="route-card__badge">01</span>
+          <h3>Cursa d'orientació</h3>
+          <div class="route-card__meta">
+            <span><svg><use href="#icon-clock"/></svg>3–4 h</span>
+            <span><svg><use href="#icon-users"/></svg>Grups de 4–5</span>
+            <span><svg><use href="#icon-map"/></svg>Argentona o entorn propi</span>
+          </div>
+          <p>Amb un mapa topogràfic i un full de marcatge, cada grup busca el màxim de fites possibles dins un temps determinat. Es pot fer en clau competitiva o cooperativa.</p>
+        </article>
+        <article class="route-card reveal">
+          <span class="route-card__badge">02</span>
+          <h3>Reptes cooperatius</h3>
+          <div class="route-card__meta">
+            <span><svg><use href="#icon-clock"/></svg>3–4 h</span>
+            <span><svg><use href="#icon-users"/></svg>Dos grans grups</span>
+            <span><svg><use href="#icon-map"/></svg>Argentona o entorn propi</span>
+          </div>
+          <p>El grup es divideix en dos: mentre uns fan la cursa d'orientació, els altres han de superar reptes que només es resolen treballant junts.</p>
+        </article>
+        <article class="route-card reveal">
+          <span class="route-card__badge">03</span>
+          <h3>Mountain Escape Room</h3>
+          <div class="route-card__meta">
+            <span><svg><use href="#icon-clock"/></svg>3–4 h</span>
+            <span><svg><use href="#icon-users"/></svg>Grups de 4–5</span>
+            <span><svg><use href="#icon-compass"/></svg>Font Picant d'Argentona</span>
+          </div>
+          <p>La llegenda del tresor del Capità Barbanegra, amagat als voltants del Castell de Burriac. Cada grup rep un sobre amb el seu propi fil conductor i enigmes.</p>
+        </article>
+        <article class="route-card reveal">
+          <span class="route-card__badge">04</span>
+          <h3>Cursa tecnològica natural</h3>
+          <div class="route-card__meta">
+            <span><svg><use href="#icon-clock"/></svg>3–4 h</span>
+            <span><svg><use href="#icon-users"/></svg>Grups de 3–5</span>
+            <span><svg><use href="#icon-map"/></svg>Argentona o entorn propi</span>
+          </div>
+          <p>Cada fita del mapa amaga un codi QR amb una pregunta o enigma per resoldre. Ideal per treballar continguts curriculars de manera interdisciplinar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Des de 2015</span>
+        <h2>Quatre pilars, una mateixa filosofia</h2>
+        <p>Tota activitat de Viu la Muntanya està construïda perquè el propi participant, amb l'ajuda del grup, pugui recórrer aquest procés amb total seguretat.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal"><span class="pillar__num">01</span><h4>Reconèixer</h4><p>L'entorn i com moure-s'hi.</p></div>
+        <div class="pillar reveal"><span class="pillar__num">02</span><h4>Aprendre</h4><p>Equivocar-se sense risc real.</p></div>
+        <div class="pillar reveal"><span class="pillar__num">03</span><h4>Decidir</h4><p>Triar el camí per assolir l'objectiu.</p></div>
+        <div class="pillar reveal"><span class="pillar__num">04</span><h4>Executar</h4><p>Portar la decisió fins al final.</p></div>
+      </div>
+      <p style="margin-top:2rem"><a href="projecte.html" class="btn btn--dark">Descobreix tot el projecte</a></p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Equipa't per a l'aventura</span>
+        <h2>Productes propis</h2>
+        <p>Samarretes, dessuadores i roba tècnica pensada per a qui viu la muntanya cada setmana.</p>
+      </div>
+      <div class="products">
+        <article class="product-card reveal">
+          <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDLYehMAbLmvLvJmWXprjaN0fn6Kz_rAofGT8qXzxd9Nto0sRMa4Fwojj54z5xz_aBXEMsCO5mdarKGJaj2JGz3EFH1dRoH2Epa7B8qN-bpF9Nrocp91hWHtuu7bHL69VUKbFaOXfryf9hibEns6dC5RH3qVBJEPdoU2MvaH6x0ZjoyAY2pIhtA_WzfN_UHYD1dceljPcPHzyCDrqmweaPNkQZ7yRzO7Aw3ZcYR=w640" alt="Samarreta de cotó Viu la Muntanya" loading="lazy">
+          <div class="product-card__body">
+            <h3>Samarreta de cotó</h3>
+            <span class="price-tag">12 €</span>
+            <p>La samarreta de cada dia, amb el logo del projecte.</p>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBVPCT-1cer2zkVnmhCEAoDh7PkdGXNocUqbibE5at52FmLFe-GthVoY0CtkILWOlHNLKow0dFScWyMTRh-Yy1VCYxOT6hw8cBhymhBFCYoqof_SbkIxZYvjzQUdy9CTh1ceiCwcN5aIuEUE_j5rgrf5LROThCCSNZoHUS72svkOnAJG11pos4bWT7s29II1LR7CJg8ISbf2DDrLeAaWB-5sNFwoInXG8Fg_sxkGcU=w640" alt="Dessuadora Viu la Muntanya" loading="lazy">
+          <div class="product-card__body">
+            <h3>Dessuadora</h3>
+            <span class="price-tag">20 €</span>
+            <p>Per als dies de sortida amb fred a la muntanya.</p>
+          </div>
+        </article>
+        <article class="product-card reveal">
+          <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDaHnLHtV3KMVX_6_kAUvqtvgoRmElLnXwcIPGRNfv_46cSIM_3iYuXs6yHv9k1aN1sD0_4A1cnWJeYBfn-HBUOw6Es1BhGfWIppcNM-d9jKvgiilxrpskwewvZUoO0dH7BOS5PAo9j5XqZlrNhJcqvUv4bC62iwKQeCVGsfvArtsap7DCsottbF8LXKp7Bkgui9agQC4Hg6j95kz20_LT5P9Bi3AKijrhg5oZf=w640" alt="Samarreta tècnica de córrer Viu la Muntanya" loading="lazy">
+          <div class="product-card__body">
+            <h3>Samarreta tècnica de córrer</h3>
+            <span class="price-tag">15 €</span>
+            <p>Teixit transpirable per a les curses d'orientació.</p>
+          </div>
+        </article>
+      </div>
+      <p style="margin-top:2rem"><a href="productes.html" class="btn btn--dark">Veure tots els productes</a></p>
+    </div>
+  </section>
+
+  <section class="cta-final topo-bg topo-bg--dark">
+    <div class="container">
+      <span class="eyebrow eyebrow--onDark">Parlem-ne</span>
+      <h2>Porta el teu grup a la muntanya</h2>
+      <p>Escoles, instituts i casals d'estiu de tot el Baix Maresme ja han fet el seu propi camí amb nosaltres. Explica'ns el teu grup i et proposem la sortida.</p>
+      <div class="hero__actions">
+        <a href="contacte.html" class="btn btn--primary">Sol·licita informació</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M11 26 18 10 21 19 29 26 21 21Z" fill="currentColor"/></svg>
+          <span>Viu la Muntanya</span>
+        </div>
+        <p>Projecte d'educació en el medi natural al Baix Maresme. Orientació, aventura i descoberta per a escoles i casals d'estiu des de 2015.</p>
+      </div>
+      <div class="footer">
+        <h5>Explora</h5>
+        <ul class="footer__links">
+          <li><a href="projecte.html">El projecte</a></li>
+          <li><a href="escoles.html">Escoles</a></li>
+          <li><a href="casals.html">Casals d'estiu</a></li>
+          <li><a href="productes.html">Productes</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <h5>Contacte</h5>
+        <ul class="footer__links">
+          <li><a href="contacte.html">Formulari de contacte</a></li>
+          <li><a href="treballa.html">Treballa amb nosaltres</a></li>
+          <li>Baix Maresme, Catalunya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2015–2026 Viu la Muntanya</span>
+      <span>Argentona · Mataró · Baix Maresme</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
