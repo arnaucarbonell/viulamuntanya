@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Zilla+Slab:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,6 +20,8 @@
   <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor"/></symbol>
   <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="icon-close" viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
 <header class="site-header">
@@ -54,14 +56,14 @@
 
 <main>
 
-  <section class="hero topo-bg topo-bg--dark">
+  <section class="hero topo-bg">
     <div class="container">
       <p class="hero__coords">41°32′ N · Baix Maresme — Argentona · Mataró</p>
-      <h1>Viu la muntanya<br>amb mapa i <em>brúixola</em></h1>
+      <h1>Viu la muntanya<br>amb mapa i <mark>brúixola</mark></h1>
       <p class="hero__lede">Des de 2015 acompanyem escoles, instituts i casals d'estiu a descobrir el nostre entorn natural: curses d'orientació, reptes cooperatius i un mountain escape room a l'aire lliure. Sense pantalles, amb un mapa topogràfic a les mans.</p>
       <div class="hero__actions">
         <a href="escoles.html" class="btn btn--primary">Activitats per a escoles</a>
-        <a href="casals.html" class="btn btn--ghost">Activitats per a casals d'estiu</a>
+        <a href="casals.html" class="btn btn--outline">Activitats per a casals d'estiu</a>
       </div>
     </div>
   </section>
@@ -173,10 +175,10 @@
         <p>Tota activitat de Viu la Muntanya està construïda perquè el propi participant, amb l'ajuda del grup, pugui recórrer aquest procés amb total seguretat.</p>
       </div>
       <div class="pillars">
-        <div class="pillar reveal"><span class="pillar__num">01</span><h4>Reconèixer</h4><p>L'entorn i com moure-s'hi.</p></div>
-        <div class="pillar reveal"><span class="pillar__num">02</span><h4>Aprendre</h4><p>Equivocar-se sense risc real.</p></div>
-        <div class="pillar reveal"><span class="pillar__num">03</span><h4>Decidir</h4><p>Triar el camí per assolir l'objectiu.</p></div>
-        <div class="pillar reveal"><span class="pillar__num">04</span><h4>Executar</h4><p>Portar la decisió fins al final.</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-map"/></svg></span><h4>Reconèixer</h4><p>L'entorn i com moure-s'hi</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-compass"/></svg></span><h4>Aprendre</h4><p>Equivocar-se sense risc real</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-target"/></svg></span><h4>Decidir</h4><p>Triar el camí a seguir</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-check"/></svg></span><h4>Executar</h4><p>Portar-ho fins al final</p></div>
       </div>
       <p style="margin-top:2rem"><a href="projecte.html" class="btn btn--dark">Descobreix tot el projecte</a></p>
     </div>

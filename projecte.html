@@ -8,13 +8,18 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Zilla+Slab:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 3 3 5v16l6-2 6 2 6-2V3l-6 2-6-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="19" stroke="currentColor" stroke-width="2"/><line x1="15" y1="5" x2="15" y2="21" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor"/></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 20c0-2.6 1.8-4.7 4-5.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
 <header class="site-header">
@@ -49,7 +54,7 @@
 
 <main>
 
-  <section class="hero hero--page topo-bg topo-bg--dark">
+  <section class="hero hero--page topo-bg">
     <div class="container">
       <p class="hero__coords">Origen · 2015</p>
       <h1>El projecte</h1>
@@ -88,10 +93,10 @@
         <p>L'eix del projecte és la descoberta de l'entorn des d'una perspectiva individual. La natura és sinònim de llibertat, exploració i aventura: un espai on cada participant, amb l'ajuda del grup, pot reconèixer, aprendre, decidir i executar amb total seguretat.</p>
       </div>
       <div class="pillars">
-        <div class="pillar reveal"><span class="pillar__num">01</span><h4>Reconèixer</h4><p>Allò que l'envolta i com desenvolupar-s'hi.</p></div>
-        <div class="pillar reveal"><span class="pillar__num">02</span><h4>Aprendre</h4><p>I equivocar-se jugant amb la natura, per prendre decisions amb més solidesa.</p></div>
-        <div class="pillar reveal"><span class="pillar__num">03</span><h4>Decidir</h4><p>El camí correcte per tirar endavant els objectius plantejats.</p></div>
-        <div class="pillar reveal"><span class="pillar__num">04</span><h4>Executar</h4><p>Accions correctes que et portin al destí escollit.</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-map"/></svg></span><h4>Reconèixer</h4><p>Allò que l'envolta</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-compass"/></svg></span><h4>Aprendre</h4><p>Equivocant-se sense por</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-target"/></svg></span><h4>Decidir</h4><p>El camí que cal seguir</p></div>
+        <div class="pillar reveal"><span class="icon-badge"><svg><use href="#icon-check"/></svg></span><h4>Executar</h4><p>Fins al destí escollit</p></div>
       </div>
     </div>
   </section>
@@ -104,15 +109,15 @@
       </div>
       <div class="infobar">
         <div class="infobox reveal">
-          <h4>Coneixement del territori</h4>
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-map"/></svg></span>Coneixement del territori</h4>
           <p>Tots els nostres professionals coneixen a fons les zones naturals on es desenvolupen les activitats, cosa que ens permet acompanyar cada grup de prop.</p>
         </div>
         <div class="infobox reveal">
-          <h4>Grups reduïts</h4>
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-users"/></svg></span>Grups reduïts</h4>
           <p>Cada monitor o monitora es manté sempre amb el mateix grup reduït, guiant-lo pel seu propi procés d'aprenentatge.</p>
         </div>
         <div class="infobox reveal">
-          <h4>Seguretat abans que res</h4>
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-compass"/></svg></span>Seguretat abans que res</h4>
           <p>Som conscients de la perillositat del medi natural. Per això la nostra missió combina passió i respecte per la natura amb un control constant de la seguretat.</p>
         </div>
       </div>

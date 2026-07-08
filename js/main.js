@@ -15,9 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* --- revelat suau en fer scroll --- */
+  /* --- revelat suau en fer scroll ---
+     El contingut ja és visible per CSS per defecte. Només si aquest script
+     s'executa afegim la classe "reveal-pending" (que sí amaga l'element) i
+     tot seguit l'anem revelant amb l'IntersectionObserver. Així, si JS falla
+     o triga a carregar, l'usuari sempre veu el contingut. */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
+    revealEls.forEach(function (el) { el.classList.add("reveal-pending"); });
     var io = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -30,7 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
       { threshold: 0.15 }
     );
     revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 });

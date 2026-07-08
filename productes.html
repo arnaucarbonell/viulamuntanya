@@ -8,13 +8,15 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Zilla+Slab:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 20c0-2.6 1.8-4.7 4-5.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
 </svg>
 
 <header class="site-header">
@@ -49,7 +51,7 @@
 
 <main>
 
-  <section class="hero hero--page topo-bg topo-bg--dark">
+  <section class="hero hero--page topo-bg">
     <div class="container">
       <p class="hero__coords">Botiga · Viu la Muntanya</p>
       <h1>Equipa't per<br>a l'aventura</h1>
@@ -110,11 +112,11 @@
 
       <div class="infobar" style="margin-top:3rem">
         <div class="infobox reveal">
-          <h4>Com comandar-los</h4>
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-mail"/></svg></span>Com comandar-los</h4>
           <p>Contacta'ns indicant la talla i la quantitat que necessites. Et confirmarem disponibilitat i punt de recollida o lliurament.</p>
         </div>
         <div class="infobox reveal">
-          <h4>Comandes de grup</h4>
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-users"/></svg></span>Comandes de grup</h4>
           <p>Si ho demana un centre escolar o un casal per a tot un grup, podem gestionar la comanda conjunta abans de la sortida.</p>
         </div>
       </div>
