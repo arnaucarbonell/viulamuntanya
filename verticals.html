@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lliga de Verticals — Viu la Muntanya</title>
 <meta name="description" content="Les verticals de la lliga de Viu la Muntanya al Baix Maresme: Vilassar de Dalt, Argentona, Òrrius, Canyamars i Caldes d'Estrac. Consulta el traçat de cada cursa a Wikiloc i al planificador de Suunto.">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png">
+<link rel="icon" href="assets/favicon.png?v=2" sizes="64x64" type="image/png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
@@ -18,6 +19,7 @@
   <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 3 3 5v16l6-2 6 2 6-2V3l-6 2-6-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="19" stroke="currentColor" stroke-width="2"/><line x1="15" y1="5" x2="15" y2="21" stroke="currentColor" stroke-width="2"/></symbol>
   <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="icon-peak" viewBox="0 0 24 24"><path d="M3 19 9.5 8l3.2 5.2L15 9.5 21 19Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
   <symbol id="icon-link" viewBox="0 0 24 24"><path d="M14 4h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 4 11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="icon-watch" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 6V3h6v3M9 18v3h6v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v2.2l1.6 1.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -54,11 +56,48 @@
     <div class="container">
       <p class="hero__coords">Lliga de Verticals · Baix Maresme</p>
       <h1>Amunt, sempre <br class="hero__linebreak"><mark>amunt</mark></h1>
-      <p class="hero__lede">Cinc pobles, cinc pujades. La Lliga de Verticals recorre el Baix Maresme amb el format més directe que hi ha: tot amunt. Aquí tens el traçat de cada prova per anar-la a reconèixer quan vulguis, amb els enllaços a Wikiloc i a Suunto.</p>
+      <p class="hero__lede">Cinc pobles, cinc pujades. La Lliga de Verticals recorre el Baix Maresme amb el format més directe que hi ha: tot amunt. Una cursa cada mes, sempre l'últim dijous, de gener a maig del 2027 i sempre de nit: briefing a les 19:45 h i sortida a les 20:00 h.</p>
       <div class="hero__actions">
-        <a href="#verticals" class="btn btn--primary">Veure els recorreguts</a>
+        <a href="#calendari" class="btn btn--primary">Veure el calendari</a>
         <a href="contacte.html" class="btn btn--outline">Vols més informació?</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="calendari">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Temporada 2027</span>
+        <h2>Calendari</h2>
+        <p>Una vertical cada mes, de gener a maig. Totes es corren de nit: briefing a les 19:45 h i sortida a les 20:00 h.</p>
+      </div>
+      <ol class="calendar">
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>28</b>gen</span>
+          <a class="calendar__name" href="#vilassar-de-dalt">Vertical de Vilassar de Dalt</a>
+          <span class="calendar__note">4,5 km · +415 m</span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>25</b>feb</span>
+          <a class="calendar__name" href="#canyamars">Vertical de Canyamars</a>
+          <span class="calendar__note">5,18 km · +410 m</span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>25</b>mar</span>
+          <a class="calendar__name" href="#caldes-destrac">Vertical de Caldes d'Estrac</a>
+          <span class="calendar__note">7,19 km · +555 m</span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>22</b>abr</span>
+          <a class="calendar__name" href="#orrius">Vertical d'Òrrius</a>
+          <span class="calendar__note">2,69 km · +227 m</span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>27</b>mai</span>
+          <a class="calendar__name" href="#argentona">Vertical d'Argentona</a>
+          <span class="calendar__note">2,93 km · +345 m</span>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -70,25 +109,22 @@
         <p>Cada vertical té el traçat publicat a Wikiloc, per descarregar-lo o seguir-lo des del mòbil, i al planificador de rutes de Suunto, per estudiar el perfil i enviar-lo al rellotge abans de la cursa.</p>
       </div>
 
-      <!-- ================================================================
-           NOTA PER A QUI EDITI LA WEB
-           A cada targeta pots afegir la data, la distància i el desnivell
-           dins del bloc <div class="route-card__meta">, seguint el mateix
-           format que els altres "span". Exemple:
-             <span><svg><use href="#icon-peak"/></svg>+320 m D+</span>
-           Els enllaços de Wikiloc i Suunto ja són els definitius.
-           =============================================================== -->
-
       <div class="routes">
 
         <article class="route-card reveal" id="vilassar-de-dalt">
           <span class="route-card__badge">01</span>
+          <span class="eyebrow">Dijous 28 de gener de 2027</span>
           <h3>Vertical de Vilassar de Dalt</h3>
           <div class="route-card__meta">
-            <span><svg><use href="#icon-map"/></svg>Vilassar de Dalt</span>
-            <span><svg><use href="#icon-peak"/></svg>Serralada Litoral</span>
+            <span><svg><use href="#icon-map"/></svg>4,5 km</span>
+            <span><svg><use href="#icon-peak"/></svg>+415 m</span>
+            <span><svg><use href="#icon-clock"/></svg>Màxim 60 min</span>
           </div>
-          <p>Traçat complet de la vertical de Vilassar de Dalt, amb el perfil de pujada i el recorregut punt per punt.</p>
+          <dl class="vertical-facts">
+            <div><dt>Sortida</dt><dd>Santuari de la Cisa — Carrer Elionor Cisa, 32, 08338 Premià de Dalt</dd></div>
+            <div><dt>Arribada</dt><dd>Ermita de Sant Mateu</dd></div>
+            <div><dt>Horari</dt><dd>Briefing a les 19:45 h · sortida a les 20:00 h</dd></div>
+          </dl>
           <div class="route-card__links">
             <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/trail-running-trails/vertical-de-vilassar-de-dalt-276279617?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
               <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
@@ -99,50 +135,20 @@
           </div>
         </article>
 
-        <article class="route-card reveal" id="argentona">
-          <span class="route-card__badge">02</span>
-          <h3>Vertical d'Argentona</h3>
-          <div class="route-card__meta">
-            <span><svg><use href="#icon-map"/></svg>Argentona</span>
-            <span><svg><use href="#icon-peak"/></svg>Serralada Litoral</span>
-          </div>
-          <p>La vertical de casa nostra. Traçat complet amb el perfil de pujada i el recorregut punt per punt.</p>
-          <div class="route-card__links">
-            <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/hiking-trails/vertical-argentona-276293587?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
-            </a>
-            <a class="btn btn--sm btn--track" href="https://routeplanner.suunto.com/?route=vertical-argentona-1785157693133&amp;style=outdoor" target="_blank" rel="noopener">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-watch"/></svg>Obrir a Suunto<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="route-card reveal" id="orrius">
-          <span class="route-card__badge">03</span>
-          <h3>Vertical d'Òrrius</h3>
-          <div class="route-card__meta">
-            <span><svg><use href="#icon-map"/></svg>Òrrius</span>
-            <span><svg><use href="#icon-peak"/></svg>Serralada Litoral</span>
-          </div>
-          <p>Traçat complet de la vertical d'Òrrius, amb el perfil de pujada i el recorregut punt per punt.</p>
-          <div class="route-card__links">
-            <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/hiking-trails/vertical-dorrius-276298577?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
-            </a>
-            <a class="btn btn--sm btn--track" href="https://routeplanner.suunto.com/?route=vertical-drrius-1785160561310&amp;style=outdoor" target="_blank" rel="noopener">
-              <svg width="18" height="18" aria-hidden="true"><use href="#icon-watch"/></svg>Obrir a Suunto<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
-            </a>
-          </div>
-        </article>
-
         <article class="route-card reveal" id="canyamars">
-          <span class="route-card__badge">04</span>
+          <span class="route-card__badge">02</span>
+          <span class="eyebrow">Dijous 25 de febrer de 2027</span>
           <h3>Vertical de Canyamars</h3>
           <div class="route-card__meta">
-            <span><svg><use href="#icon-map"/></svg>Canyamars · Dosrius</span>
-            <span><svg><use href="#icon-peak"/></svg>Montnegre i el Corredor</span>
+            <span><svg><use href="#icon-map"/></svg>5,18 km</span>
+            <span><svg><use href="#icon-peak"/></svg>+410 m</span>
+            <span><svg><use href="#icon-clock"/></svg>Màxim 60 min</span>
           </div>
-          <p>Traçat complet de la vertical de Canyamars, amb el perfil de pujada i el recorregut punt per punt.</p>
+          <dl class="vertical-facts">
+            <div><dt>Sortida</dt><dd><a href="https://maps.app.goo.gl/zbEc1tipNWeEp4KA7" target="_blank" rel="noopener">Pou de Glaç de Canyamars ↗</a></dd></div>
+            <div><dt>Arribada</dt><dd>Santuari del Corredor</dd></div>
+            <div><dt>Horari</dt><dd>Briefing a les 19:45 h · sortida a les 20:00 h</dd></div>
+          </dl>
           <div class="route-card__links">
             <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/hiking-trails/vertical-canyamars-276292895?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
               <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
@@ -154,18 +160,72 @@
         </article>
 
         <article class="route-card reveal" id="caldes-destrac">
-          <span class="route-card__badge">05</span>
+          <span class="route-card__badge">03</span>
+          <span class="eyebrow">Dijous 25 de març de 2027</span>
           <h3>Vertical de Caldes d'Estrac</h3>
           <div class="route-card__meta">
-            <span><svg><use href="#icon-map"/></svg>Caldes d'Estrac</span>
-            <span><svg><use href="#icon-compass"/></svg>Del mar cap amunt</span>
+            <span><svg><use href="#icon-map"/></svg>7,19 km</span>
+            <span><svg><use href="#icon-peak"/></svg>+555 m</span>
+            <span><svg><use href="#icon-clock"/></svg>Màxim 75 min</span>
           </div>
-          <p>Traçat complet de la vertical de Caldes d'Estrac, amb el perfil de pujada i el recorregut punt per punt.</p>
+          <dl class="vertical-facts">
+            <div><dt>Sortida</dt><dd>Davant d'Eurostage Caldes d'Estrac — Carrer Riera de Torrentbó, 08350</dd></div>
+            <div><dt>Arribada</dt><dd>Montalt</dd></div>
+            <div><dt>Horari</dt><dd>Briefing a les 19:45 h · sortida a les 20:00 h</dd></div>
+          </dl>
           <div class="route-card__links">
             <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/hiking-trails/vertical-caldes-destrac-276299836?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
               <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
             </a>
             <a class="btn btn--sm btn--track" href="https://routeplanner.suunto.com/?route=vertical-caldes-destrac-1785161394911&amp;style=outdoor&amp;lat=41.591777&amp;lng=2.508955&amp;zoom=12.37" target="_blank" rel="noopener">
+              <svg width="18" height="18" aria-hidden="true"><use href="#icon-watch"/></svg>Obrir a Suunto<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="route-card reveal" id="orrius">
+          <span class="route-card__badge">04</span>
+          <span class="eyebrow">Dijous 22 d'abril de 2027</span>
+          <h3>Vertical d'Òrrius</h3>
+          <div class="route-card__meta">
+            <span><svg><use href="#icon-map"/></svg>2,69 km</span>
+            <span><svg><use href="#icon-peak"/></svg>+227 m</span>
+            <span><svg><use href="#icon-clock"/></svg>Màxim 60 min</span>
+          </div>
+          <dl class="vertical-facts">
+            <div><dt>Sortida</dt><dd>Parc Nou — Carrer del Pont, 9, 08317 Òrrius</dd></div>
+            <div><dt>Arribada</dt><dd>Turó Rodó</dd></div>
+            <div><dt>Horari</dt><dd>Briefing a les 19:45 h · sortida a les 20:00 h</dd></div>
+          </dl>
+          <div class="route-card__links">
+            <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/hiking-trails/vertical-dorrius-276298577?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
+              <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
+            </a>
+            <a class="btn btn--sm btn--track" href="https://routeplanner.suunto.com/?route=vertical-drrius-1785160561310&amp;style=outdoor" target="_blank" rel="noopener">
+              <svg width="18" height="18" aria-hidden="true"><use href="#icon-watch"/></svg>Obrir a Suunto<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="route-card reveal" id="argentona">
+          <span class="route-card__badge">05</span>
+          <span class="eyebrow">Dijous 27 de maig de 2027</span>
+          <h3>Vertical d'Argentona</h3>
+          <div class="route-card__meta">
+            <span><svg><use href="#icon-map"/></svg>2,93 km</span>
+            <span><svg><use href="#icon-peak"/></svg>+345 m</span>
+            <span><svg><use href="#icon-clock"/></svg>Màxim 60 min</span>
+          </div>
+          <dl class="vertical-facts">
+            <div><dt>Sortida</dt><dd>Font Picant — Passeig de Burriac, 08310 Argentona</dd></div>
+            <div><dt>Arribada</dt><dd>Castell de Burriac</dd></div>
+            <div><dt>Horari</dt><dd>Briefing a les 19:45 h · sortida a les 20:00 h</dd></div>
+          </dl>
+          <div class="route-card__links">
+            <a class="btn btn--sm btn--track" href="https://www.wikiloc.com/hiking-trails/vertical-argentona-276293587?wa=sc&amp;utm_campaign=badge&amp;utm_source=unknown&amp;utm_medium=unknown" target="_blank" rel="noopener">
+              <svg width="18" height="18" aria-hidden="true"><use href="#icon-map"/></svg>Veure a Wikiloc<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
+            </a>
+            <a class="btn btn--sm btn--track" href="https://routeplanner.suunto.com/?route=vertical-argentona-1785157693133&amp;style=outdoor" target="_blank" rel="noopener">
               <svg width="18" height="18" aria-hidden="true"><use href="#icon-watch"/></svg>Obrir a Suunto<svg width="18" height="18" aria-hidden="true"><use href="#icon-link"/></svg>
             </a>
           </div>

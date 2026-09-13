@@ -52,7 +52,7 @@ Si vols mantenir `viulamuntanya.org`, a **Settings → Pages → Custom domain**
 
 ## Què s'ha actualitzat en aquesta versió
 - **Logo oficial** a la capçalera i al peu de totes les pàgines, substituint la marca dibuixada en SVG. També s'ha afegit una icona per a mòbil (`apple-touch-icon`).
-- **Nova pàgina `verticals.html`** amb les cinc verticals de la lliga (Vilassar de Dalt, Argentona, Òrrius, Canyamars i Caldes d'Estrac). Cada targeta porta l'enllaç a **Wikiloc** i al **planificador de rutes de Suunto**.
+- **Nova pàgina `verticals.html`** amb el calendari de la temporada 2027 i la fitxa de les cinc verticals (data, punt de sortida i d'arribada, horari de briefing i sortida, distància, desnivell i temps màxim). Cada targeta porta l'enllaç a **Wikiloc** i al **planificador de rutes de Suunto**.
 - **Nova entrada "Verticals"** al menú principal i al peu de totes les pàgines, i un bloc de presentació de la lliga a la portada.
 - **Fotos reals dels productes** desades en local a `assets/img/productes/`: samarreta de cotó (verd, negre, vermell), dessuadora (verd, negre, blau, mostassa) i bossa tote bag.
 
@@ -60,7 +60,7 @@ El full d'estil (`css/styles.css`) no s'ha modificat: només s'hi han **afegit**
 
 ## Contingut pendent de revisar
 - **Preu de la bossa tote bag**: a `productes.html` hi ha un `price-tag` que diu «Consulta'ns». Substitueix-lo pel preu real (hi ha un comentari HTML al costat).
-- **Dades de cada vertical**: a `verticals.html` hi ha un comentari explicant com afegir data, distància i desnivell a cada targeta, dins del bloc `route-card__meta`.
+- **Data de la vertical d'Òrrius**: al calendari hi consta dijous 22 d'abril del 2027, que és el quart dijous del mes i no pas l'últim (l'últim seria el 29). Si és un error, canvia-ho a `verticals.html` (apareix a la fitxa i a la fila del calendari).
 - **Samarreta tècnica de córrer**: és l'únic producte que encara fa servir les fotos allotjades a Google (`lh3.googleusercontent.com`), perquè no se n'ha proporcionat cap imatge nova. Quan en tinguis una, desa-la a `assets/img/productes/` i canvia les rutes.
 - Els dos formularis (Contacte i Treballa amb nosaltres) són els mateixos Google Forms que ja s'utilitzaven abans — no cal tornar-los a crear.
 - Textos i xifres (any de naixement, nombre de participants, preus) provenen del contingut original; revisa'ls si han canviat.
