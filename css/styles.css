@@ -612,3 +612,34 @@ mark {
 .btn--track:hover { background: var(--sage); }
 .btn--track svg { width: 18px; height: 18px; flex-shrink: 0; }
 .fork--single { grid-template-columns: 1fr; }
+
+/* ---------------------------------------------------------------------- */
+/* Correccions per a mòbil                                                 */
+/* ---------------------------------------------------------------------- */
+
+/* 1. Franja de xifres de la portada.
+   .stats__grid declarava "padding: 2.2rem 0" i, com que va després de
+   .container al full d'estil i té la mateixa especificitat, li anul·lava
+   el marge lateral d'1.5rem. Per això les quatre targetes quedaven
+   enganxades a la vora de la pantalla. Recuperem el marge lateral. */
+.stats__grid { padding: 2.2rem 1.5rem; }
+
+@media (max-width: 560px) {
+  .stats__grid { padding: 1.9rem 1.5rem 2.1rem; gap: 0.9rem; }
+  .stat { padding: 1.15rem 1.05rem 1.25rem; }
+  .stat__num { font-size: 2rem; }
+  .stat__label { font-size: 0.72rem; line-height: 1.4; margin-top: 0.45rem; }
+}
+
+/* 2. Subratllat groc dels titulars.
+   El fons d'un element en línia és tan alt com la caixa de la font
+   (a l'Anton, uns 1,36em), no com l'interlineat. Amb line-height 1.05 el
+   groc sobresortia ~0.15em per dalt i tapava la línia anterior (per
+   exemple la coma d'"Amunt, sempre"). Fent-lo inline-block, l'alçada del
+   groc passa a ser la que li indiquem, i deixem prou interlineat al títol.
+   Nota: un <mark> inline-block ja no es parteix en dues línies; per a
+   paraules soltes com "brúixola" o "amunt" no és cap problema. */
+@media (max-width: 860px) {
+  .hero h1 { line-height: 1.22; }
+  mark { display: inline-block; line-height: 1.04; padding: 0.05em 0.22em; }
+}
