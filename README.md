@@ -10,6 +10,7 @@ viu-la-muntanya/
 ├── projecte.html       El projecte (origen, filosofia, com treballem)
 ├── escoles.html        Orientació en centres escolars
 ├── casals.html         Orientació en casals d'estiu
+├── verticals.html      Lliga de Verticals (enllaços a Wikiloc i Suunto)
 ├── productes.html      Botiga / productes propis
 ├── treballa.html       Treballa amb nosaltres (formulari)
 ├── contacte.html       Contacte (formulari)
@@ -20,7 +21,10 @@ viu-la-muntanya/
 └── assets/
     ├── favicon.svg
     ├── topo-light.svg  Textura de corbes de nivell (fons clar)
-    └── topo-dark.svg   Textura de corbes de nivell (fons fosc)
+    ├── topo-dark.svg   Textura de corbes de nivell (fons fosc)
+    └── img/
+        ├── logo/       Logo oficial (blanc, negre, negre sobre blanc, icona)
+        └── productes/  Fotos dels productes propis
 ```
 
 No hi ha cap pas de compilació: és HTML/CSS/JS pla. Es pot obrir `index.html` directament al navegador o servir-lo amb qualsevol servidor estàtic.
@@ -46,8 +50,18 @@ No hi ha cap pas de compilació: és HTML/CSS/JS pla. Es pot obrir `index.html` 
 ### Domini propi (opcional)
 Si vols mantenir `viulamuntanya.org`, a **Settings → Pages → Custom domain** hi pots afegir el domini, i des del teu proveïdor de DNS apuntar-lo amb un registre `CNAME` cap a `EL_TEU_USUARI.github.io`.
 
-## Contingut a revisar abans de publicar
-- Les fotos de productes (`productes.html`, secció d'inici) encara apunten a les imatges originals allotjades a Google (`lh3.googleusercontent.com`). Funcionen, però no són fiables a llarg termini: és recomanable baixar-les i desar-les dins `assets/` amb rutes locals.
+## Què s'ha actualitzat en aquesta versió
+- **Logo oficial** a la capçalera i al peu de totes les pàgines, substituint la marca dibuixada en SVG. També s'ha afegit una icona per a mòbil (`apple-touch-icon`).
+- **Nova pàgina `verticals.html`** amb les cinc verticals de la lliga (Vilassar de Dalt, Argentona, Òrrius, Canyamars i Caldes d'Estrac). Cada targeta porta l'enllaç a **Wikiloc** i al **planificador de rutes de Suunto**.
+- **Nova entrada "Verticals"** al menú principal i al peu de totes les pàgines, i un bloc de presentació de la lliga a la portada.
+- **Fotos reals dels productes** desades en local a `assets/img/productes/`: samarreta de cotó (verd, negre, vermell), dessuadora (verd, negre, blau, mostassa) i bossa tote bag.
+
+El full d'estil (`css/styles.css`) no s'ha modificat: només s'hi han **afegit** regles noves al final del fitxer, dins de blocs comentats, per al logo, les galeries de producte i els botons d'enllaç de recorregut.
+
+## Contingut pendent de revisar
+- **Preu de la bossa tote bag**: a `productes.html` hi ha un `price-tag` que diu «Consulta'ns». Substitueix-lo pel preu real (hi ha un comentari HTML al costat).
+- **Dades de cada vertical**: a `verticals.html` hi ha un comentari explicant com afegir data, distància i desnivell a cada targeta, dins del bloc `route-card__meta`.
+- **Samarreta tècnica de córrer**: és l'únic producte que encara fa servir les fotos allotjades a Google (`lh3.googleusercontent.com`), perquè no se n'ha proporcionat cap imatge nova. Quan en tinguis una, desa-la a `assets/img/productes/` i canvia les rutes.
 - Els dos formularis (Contacte i Treballa amb nosaltres) són els mateixos Google Forms que ja s'utilitzaven abans — no cal tornar-los a crear.
 - Textos i xifres (any de naixement, nombre de participants, preus) provenen del contingut original; revisa'ls si han canviat.
 

@@ -548,3 +548,67 @@ mark {
 /* ---------------------------------------------------------------------- */
 .reveal.reveal-pending { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .reveal.reveal-pending.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---------------------------------------------------------------------- */
+/* Logo real de la marca (capçalera i peu)                                 */
+/* ---------------------------------------------------------------------- */
+.brand { flex-direction: column; align-items: flex-start; gap: 3px; }
+.brand__logo { height: 40px; width: auto; }
+.brand__tag {
+  font-family: var(--f-body);
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--sage);
+  line-height: 1;
+}
+.footer__brand img { height: 34px; width: auto; }
+@media (max-width: 420px) {
+  .brand__logo { height: 34px; }
+  .brand__tag { display: none; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Galeries de producte — fotos de mostra amb fons blanc                    */
+/* ---------------------------------------------------------------------- */
+.product-card__gallery--mockup { background: var(--sage-soft); }
+.product-card__gallery--mockup img { object-fit: contain; background: var(--white); padding: 6px; }
+.product-card__gallery--single { grid-template-columns: 1fr; }
+.product-card__gallery--four .stack { grid-template-rows: repeat(3, 1fr); }
+.product-card__colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+}
+.product-card__colors span {
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--green-dark);
+  background: var(--sage-soft);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Lliga de Verticals — enllaços de recorregut dins de cada targeta         */
+/* ---------------------------------------------------------------------- */
+.route-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--sage-soft);
+}
+.btn--sm { padding: 0.6rem 1.1rem; font-size: 0.78rem; }
+.btn--track {
+  background: var(--sage-soft);
+  color: var(--green-ink);
+  border-color: transparent;
+}
+.btn--track:hover { background: var(--sage); }
+.btn--track svg { width: 18px; height: 18px; flex-shrink: 0; }
+.fork--single { grid-template-columns: 1fr; }
