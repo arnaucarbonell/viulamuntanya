@@ -60,12 +60,19 @@
       <div class="products">
 
         <article class="product-card reveal">
-          <div class="product-card__gallery product-card__gallery--mockup">
-            <img src="assets/img/productes/samarreta-verda.png" alt="Samarreta de cotó Viu la Muntanya en verd" loading="lazy">
-            <div class="stack">
+          <div class="product-carousel" data-carousel>
+            <div class="product-carousel__track">
+              <img src="assets/img/productes/samarreta-verda.png" alt="Samarreta de cotó Viu la Muntanya en verd" loading="lazy">
               <img src="assets/img/productes/samarreta-negra.png" alt="Samarreta de cotó Viu la Muntanya en negre" loading="lazy">
               <img src="assets/img/productes/samarreta-vermella.png" alt="Samarreta de cotó Viu la Muntanya en vermell" loading="lazy">
             </div>
+            <button class="product-carousel__nav product-carousel__nav--prev" type="button" aria-label="Foto anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="product-carousel__nav product-carousel__nav--next" type="button" aria-label="Foto següent">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="product-carousel__dots" role="tablist" aria-label="Fotos del producte"></div>
           </div>
           <div class="product-card__body">
             <h3>Samarreta de cotó</h3>
@@ -76,13 +83,20 @@
         </article>
 
         <article class="product-card reveal">
-          <div class="product-card__gallery product-card__gallery--mockup product-card__gallery--four">
-            <img src="assets/img/productes/dessuadora-verda.png" alt="Dessuadora Viu la Muntanya en verd" loading="lazy">
-            <div class="stack">
+          <div class="product-carousel" data-carousel>
+            <div class="product-carousel__track">
+              <img src="assets/img/productes/dessuadora-verda.png" alt="Dessuadora Viu la Muntanya en verd" loading="lazy">
               <img src="assets/img/productes/dessuadora-negra.png" alt="Dessuadora Viu la Muntanya en negre" loading="lazy">
               <img src="assets/img/productes/dessuadora-blava.png" alt="Dessuadora Viu la Muntanya en blau" loading="lazy">
               <img src="assets/img/productes/dessuadora-mostassa.png" alt="Dessuadora Viu la Muntanya en color mostassa" loading="lazy">
             </div>
+            <button class="product-carousel__nav product-carousel__nav--prev" type="button" aria-label="Foto anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="product-carousel__nav product-carousel__nav--next" type="button" aria-label="Foto següent">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="product-carousel__dots" role="tablist" aria-label="Fotos del producte"></div>
           </div>
           <div class="product-card__body">
             <h3>Dessuadora</h3>
@@ -93,8 +107,10 @@
         </article>
 
         <article class="product-card reveal">
-          <div class="product-card__gallery product-card__gallery--mockup product-card__gallery--single">
-            <img src="assets/img/productes/bossa-tote-bag.png" alt="Bossa tote bag de cotó Viu la Muntanya" loading="lazy">
+          <div class="product-carousel" data-carousel>
+            <div class="product-carousel__track">
+              <img src="assets/img/productes/bossa-tote-bag.png" alt="Bossa tote bag de cotó Viu la Muntanya" loading="lazy">
+            </div>
           </div>
           <div class="product-card__body">
             <h3>Bossa tote bag</h3>
@@ -109,18 +125,21 @@
       <div class="infobar" style="margin-top:3rem">
         <div class="infobox reveal">
           <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-mail"/></svg></span>Com comandar-los</h4>
-          <p>Contacta'ns indicant la talla i la quantitat que necessites. Et confirmarem disponibilitat i punt de recollida o lliurament.</p>
+          <p>Omple el formulari indicant model, color, talla i quantitat. Et confirmarem disponibilitat i punt de recollida o lliurament.</p>
         </div>
         <div class="infobox reveal">
           <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-users"/></svg></span>Comandes de grup</h4>
           <p>Si ho demana un centre escolar o un casal per a tot un grup, podem gestionar la comanda conjunta abans de la sortida.</p>
         </div>
       </div>
+
       <div class="form-frame reveal" style="margin-top:2.5rem">
         <p class="form-frame__label">Formulari · Comanda de productes</p>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3UGBFRqY5X65qfLtLtVi85Oeu1W73iSYwDP-JAYn6-S3Y5g/viewform?embedded=true" title="Formulari de comanda de productes Viu la Muntanya">Carregant…</iframe>
       </div>
-      <p class="form-fallback">Si el formulari no es carrega, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UGBFRqY5X65qfLtLtVi85Oeu1W73iSYwDP-JAYn6-S3Y5g/viewform" target="_blank" rel="noopener">obre'l en una pestanya nova ↗</a></p>    </div>
+      <p class="form-fallback">Si el formulari no es carrega, <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UGBFRqY5X65qfLtLtVi85Oeu1W73iSYwDP-JAYn6-S3Y5g/viewform" target="_blank" rel="noopener">obre'l en una pestanya nova ↗</a></p>
+
+    </div>
   </section>
 
 </main>
@@ -141,6 +160,7 @@
           <li><a href="escoles.html">Escoles</a></li>
           <li><a href="casals.html">Casals d'estiu</a></li>
           <li><a href="verticals.html">Verticals</a></li>
+          <li><a href="circuit-orientacio.html">Circuit d'orientació</a></li>
           <li><a href="productes.html">Productes</a></li>
         </ul>
       </div>
