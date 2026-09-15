@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circuit de curses d'orientació — Viu la Muntanya</title>
+<meta name="description" content="Quatre curses d'orientació pel Maresme: Santa Susanna, Cabrera de Mar, Vilassar de Dalt i Argentona. Circuits familiar, amateur i competitiu, amb calendari, reglament i inscripcions.">
+<link rel="icon" href="assets/favicon.png?v=2" sizes="64x64" type="image/png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2">
+<link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-menu" viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 3 3 5v16l6-2 6 2 6-2V3l-6 2-6-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><line x1="9" y1="3" x2="9" y2="19" stroke="currentColor" stroke-width="2"/><line x1="15" y1="5" x2="15" y2="21" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z" fill="currentColor"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 20c0-2.6 1.8-4.7 4-5.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22s7-7.4 7-12.6A7 7 0 0 0 5 9.4C5 14.6 12 22 12 22Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-flag" viewBox="0 0 24 24"><path d="M6 21V4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 4h12l-2.5 4L18 12H6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="icon-link" viewBox="0 0 24 24"><path d="M14 4h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 4 11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img class="brand__logo" src="assets/img/logo/logo-blanc.png" alt="Viu la Muntanya" width="363" height="241">
+      <span class="brand__tag">Baix Maresme · des de 2015</span>
+    </a>
+    <button class="nav__toggle" aria-label="Obrir menú" aria-expanded="false">
+      <svg width="22" height="22"><use href="#icon-menu"/></svg>
+    </button>
+    <nav class="nav" aria-label="Navegació principal">
+      <ul class="nav__list">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="projecte.html">El projecte</a></li>
+        <li><a href="escoles.html">Escoles</a></li>
+        <li><a href="casals.html">Casals</a></li>
+        <li><a href="verticals.html">Verticals</a></li>
+        <li><a href="circuit-orientacio.html" aria-current="page">Circuit d'orientació</a></li>
+        <li><a href="productes.html">Productes</a></li>
+        <li><a href="contacte.html" class="nav__cta">Contacte</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero--page topo-bg">
+    <div class="container">
+      <p class="hero__coords">Circuit de curses d'orientació · Maresme</p>
+      <h1>Quatre curses, <br class="hero__linebreak">quatre <mark>indrets</mark></h1>
+      <p class="hero__lede">Mapa, brúixola i un territori per descobrir. Quatre curses d'orientació en quatre municipis del Maresme, amb circuits per a qui hi va en família, per a qui comença i per a qui hi vol competir.</p>
+      <div class="hero__actions">
+        <a href="#calendari" class="btn btn--primary">Veure el calendari</a>
+        <a href="#inscripcions" class="btn btn--outline">Inscriu-t'hi</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="que-fem">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Què fem</span>
+        <h2>Quatre espais amb identitat pròpia</h2>
+        <p>El circuit el formen quatre curses d'orientació. L'objectiu principal és que, a través de l'orientació en el medi natural, es coneguin quatre espais diferents, cadascun amb la seva identitat.</p>
+        <p>Cada cursa està enfocada a tota mena de públic: hi ha lloc per al nivell familiar, per a l'amateur i per al competitiu.</p>
+      </div>
+      <div class="infobar">
+        <div class="infobox reveal">
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-users"/></svg></span>Circuit familiar</h4>
+          <p>Sense puntuació ni classificació. Es pot participar tant individualment com en grup, al ritme que vulgueu.</p>
+        </div>
+        <div class="infobox reveal">
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-compass"/></svg></span>Circuit amateur</h4>
+          <p>Per a qui comença. Tampoc puntua ni té classificació, i també s'hi pot anar sol o en grup.</p>
+        </div>
+        <div class="infobox reveal">
+          <h4><span class="icon-badge icon-badge--sm"><svg><use href="#icon-flag"/></svg></span>Circuit gran</h4>
+          <p>L'únic competitiu. Amb dues categories: individual (masculí i femení) i per parelles, on no es diferencien sexes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="calendari">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Temporada 2026–2027</span>
+        <h2>Calendari</h2>
+        <p>Quatre curses repartides pel Maresme. Toca el punt de trobada per obrir-lo al mapa.</p>
+      </div>
+      <ol class="calendar">
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>29</b>nov</span>
+          <span class="calendar__name">Santa Susanna</span>
+          <span class="calendar__note"><a href="https://maps.app.goo.gl/tmTfcSikpEejGDFv7" target="_blank" rel="noopener">Punt de trobada ↗</a></span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>28</b>feb</span>
+          <span class="calendar__name">Cabrera de Mar</span>
+          <span class="calendar__note"><a href="https://maps.app.goo.gl/RXVUFzLRRyV9gLFJ8" target="_blank" rel="noopener">Punt de trobada ↗</a></span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>25</b>abr</span>
+          <span class="calendar__name">Vilassar de Dalt</span>
+          <span class="calendar__note"><a href="https://maps.app.goo.gl/u8abxooA249LZqst6" target="_blank" rel="noopener">Punt de trobada ↗</a></span>
+        </li>
+        <li class="calendar__row reveal">
+          <span class="calendar__date"><b>27</b>jun</span>
+          <span class="calendar__name">Argentona</span>
+          <span class="calendar__note"><a href="https://maps.app.goo.gl/izAdo7Js4RgCNqd89" target="_blank" rel="noopener">Punt de trobada ↗</a></span>
+        </li>
+      </ol>
+      <p class="form-fallback">Santa Susanna és el 29 de novembre del 2026; la resta, el 2027.</p>
+    </div>
+  </section>
+
+  <section class="section" id="com-funciona">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Llegeix-ho abans d'inscriure't</span>
+        <h2>Com funciona i reglament</h2>
+        <p>Totes les curses del circuit funcionen igual. La participació és voluntària i se signa en inscriure's.</p>
+      </div>
+      <div class="routes">
+
+        <article class="route-card reveal">
+          <h3>Com es corre i com es puntua</h3>
+          <ul class="rule-list">
+            <li>Cada cursa té un horari d'inici i un horari límit per acabar. Passat el límit, l'equip és penalitzat amb 5 punts per cada franja de 10 minuts de retard.</li>
+            <li>Totes les curses tenen un nombre elevat de fites, i cada fita val una puntuació diferent segons la seva dificultat.</li>
+            <li>Hi ha tres circuits segons el nivell. Només el circuit gran és competitiu; el familiar i l'amateur no puntuen, s'hi pot anar individualment o en grup i no tenen classificació.</li>
+            <li>Al circuit competitiu hi ha dues categories: individual, amb masculí i femení, i per parelles, on no es diferencien sexes.</li>
+            <li>Les curses no són acumulatives: cadascuna funciona de manera independent de les altres.</li>
+            <li>Hi ha un petit obsequi per als participants que facin totes les curses del circuit.</li>
+          </ul>
+        </article>
+
+        <article class="route-card reveal">
+          <h3>Condicions de compra</h3>
+          <ul class="rule-list">
+            <li>La inscripció es fa efectiva quan es rep la confirmació del pagament.</li>
+            <li>L'import és individual, tant si t'inscrius sol com en parella.</li>
+            <li>Les places estan limitades a un màxim de 60 persones i no es pot demanar el retorn a un mes vista.</li>
+            <li>Es pot contractar una assegurança temporal per cada cursa amb un cost de 6 €. Tot i així, la participació a les competicions se signa de manera voluntària.</li>
+            <li>L'organització es reserva el dret de modificar el programa de l'esdeveniment.</li>
+            <li>Qualsevol reclamació sobre la realització, suspensió, modificació o anul·lació de l'esdeveniment s'adreça a l'organització presentant el comprovant d'inscripció.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="inscripcions">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Places limitades a 60 persones</span>
+        <h2>Inscripcions i pagaments</h2>
+        <p>Pots inscriure't a tot el circuit o només a les curses que vulguis.</p>
+      </div>
+      <div class="infobar">
+        <div class="infobox reveal">
+          <h4>Circuit sencer</h4>
+          <span class="price-tag">35 €</span>
+          <p>Les quatre curses d'orientació de la temporada.</p>
+        </div>
+        <div class="infobox reveal">
+          <h4>Cursa individual</h4>
+          <span class="price-tag">10 €</span>
+          <p>Per cursa, si en vols fer només algunes.</p>
+        </div>
+        <div class="infobox reveal">
+          <h4>Assegurança d'accidents</h4>
+          <span class="price-tag">6 € / cursa</span>
+          <p>Opcional. Es contracta de manera temporal per a la cursa que facis.</p>
+        </div>
+      </div>
+
+      <div class="form-frame reveal" style="margin-top:2.5rem">
+        <p class="form-frame__label">Formulari · Inscripcions curses d'orientació</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfIKkrU1SFdRt5R4Hc6Fmbmnn0nFFULHrPHFDXoaAZ59i07kQ/viewform?embedded=true" title="Formulari d'inscripció al circuit de curses d'orientació">Carregant…</iframe>
+      </div>
+      <p class="form-fallback">Si el formulari no es carrega, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIKkrU1SFdRt5R4Hc6Fmbmnn0nFFULHrPHFDXoaAZ59i07kQ/viewform" target="_blank" rel="noopener">obre'l en una pestanya nova ↗</a></p>
+    </div>
+  </section>
+
+  <section class="cta-final topo-bg topo-bg--dark">
+    <div class="container">
+      <span class="eyebrow eyebrow--onDark">Circuit d'orientació</span>
+      <h2>Ens veiem amb el mapa a les mans</h2>
+      <p>Si tens dubtes sobre els circuits, les categories o les inscripcions, escriu-nos i t'ho expliquem.</p>
+      <div class="hero__actions">
+        <a href="contacte.html" class="btn btn--primary">Sol·licita informació</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img src="assets/img/logo/logo-blanc.png" alt="Viu la Muntanya" width="363" height="241" loading="lazy">
+        </div>
+        <p>Projecte d'educació en el medi natural al Baix Maresme. Orientació, aventura i descoberta per a escoles i casals d'estiu des de 2015.</p>
+      </div>
+      <div class="footer">
+        <h5>Explora</h5>
+        <ul class="footer__links">
+          <li><a href="projecte.html">El projecte</a></li>
+          <li><a href="escoles.html">Escoles</a></li>
+          <li><a href="casals.html">Casals d'estiu</a></li>
+          <li><a href="verticals.html">Verticals</a></li>
+          <li><a href="circuit-orientacio.html">Circuit d'orientació</a></li>
+          <li><a href="productes.html">Productes</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+        <h5>Contacte</h5>
+        <ul class="footer__links">
+          <li><a href="contacte.html">Formulari de contacte</a></li>
+          <li><a href="treballa.html">Treballa amb nosaltres</a></li>
+          <li>Baix Maresme, Catalunya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2015–2026 Viu la Muntanya</span>
+      <span>Argentona · Mataró · Baix Maresme</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
