@@ -722,3 +722,9 @@ mark {
   .vertical-facts > div { grid-template-columns: 1fr; gap: 0.15rem; }
 }
 #calendari, #verticals { scroll-margin-top: 90px; }
+
+/* Llistes del reglament de la lliga */
+.rule-list { display: grid; gap: 0.7rem; margin: 0.2rem 0 0; }
+.rule-list li { position: relative; padding-left: 1.4rem; font-size: 0.95rem; line-height: 1.6; opacity: 0.88; }
+.rule-list li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); }
+.infobox .price-tag { margin: 0.2rem 0 0.7rem; }
